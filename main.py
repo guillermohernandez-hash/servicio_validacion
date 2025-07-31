@@ -8,7 +8,7 @@ def validar():
     data=request.json
     nombre = data.get("nombre", "").strip()
     
-    if len(nombre) > 3
+    if len(nombre) > 3:
         url_notificacion = "https://servicio-notificacion-u0m2.onrender.com/notificar"
         try:
             requests.post(url_notificacion, json={"nombre": nombre})
